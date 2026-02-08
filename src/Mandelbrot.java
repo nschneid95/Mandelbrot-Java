@@ -12,7 +12,7 @@ public class Mandelbrot {
 	static ImageIcon image;
 	static JLabel label;
 	static JFrame frame;
-	static int width = 500;
+	static int width = 512;
 	static int height = 500;
 	static Point startZoom;
 	static Point endZoom;
@@ -148,10 +148,10 @@ public class Mandelbrot {
 				}
 				else
 				{
-					double numerator = (double)(previousIterations - colors[x][y]);
-					double denominator = (double)(previousIterations - minIterationsUsed);
-					double colorValue = numerator / denominator * 0xFFFFFF;
-					bimage.setRGB(x, y, ColorMap.mapColor((int)colorValue));
+//					double numerator = (double)(previousIterations - colors[x][y]);
+//					double denominator = (double)(previousIterations - minIterationsUsed);
+//					double colorValue = numerator / denominator * 0xFFFFFF;
+					bimage.setRGB(x, y, ColorMap.mapColor(colors[x][y]));
 				}
 			}
 		}
